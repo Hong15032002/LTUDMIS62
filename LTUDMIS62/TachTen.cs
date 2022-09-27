@@ -26,7 +26,7 @@ namespace LTUDMIS62
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -78,6 +78,16 @@ namespace LTUDMIS62
             ten = ht.Substring(vt1, txtHT.TextLength - vt1);
             kq= ("Họ đệm: "+ hodem + "\n" + "Tên: " + ten);
             lblKQ.Text = kq;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblKQ_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

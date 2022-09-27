@@ -16,7 +16,7 @@ namespace LTUDMIS62
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MayTinh());
+            Application.Run(new frmMain());
         }
     }
 }

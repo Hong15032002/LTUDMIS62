@@ -34,7 +34,7 @@ namespace LTUDMIS62
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           this.Close();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -54,6 +54,11 @@ namespace LTUDMIS62
                 x2 = (-b - Math.Sqrt(d)) / (2 * a);
                 lblKQ.Text = " x1= " + Convert.ToString(x1) + ", x2= " + Convert.ToString(x2);
             }    
+        }
+
+        private void txtA_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

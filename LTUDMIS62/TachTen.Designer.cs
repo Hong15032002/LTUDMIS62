@@ -29,6 +29,7 @@ namespace LTUDMIS62
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbkHt = new System.Windows.Forms.Label();
             this.txtHT = new System.Windows.Forms.TextBox();
             this.btnTachHoDem = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@ namespace LTUDMIS62
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblKQ = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,9 +60,11 @@ namespace LTUDMIS62
             // txtHT
             // 
             this.txtHT.Location = new System.Drawing.Point(192, 48);
+            this.txtHT.Multiline = true;
             this.txtHT.Name = "txtHT";
             this.txtHT.Size = new System.Drawing.Size(238, 26);
             this.txtHT.TabIndex = 1;
+            this.txtHT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtHT.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnTachHoDem
@@ -167,11 +171,18 @@ namespace LTUDMIS62
             this.lblKQ.Size = new System.Drawing.Size(31, 20);
             this.lblKQ.TabIndex = 11;
             this.lblKQ.Text = "KQ";
+            this.lblKQ.Click += new System.EventHandler(this.lblKQ_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // TachTen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblKQ);
             this.Controls.Add(this.groupBox1);
@@ -207,5 +218,6 @@ namespace LTUDMIS62
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblKQ;
+        private System.Windows.Forms.Timer timer1;
     }
 }
