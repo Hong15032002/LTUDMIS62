@@ -185,6 +185,12 @@ namespace LTUDMIS62
 
         private void btnAddnew_Click(object sender, EventArgs e)
         {
+            sql = "select MaNhom,MaHH,TenHH,Dvt,DGvnd,Sanxuat from tblDMHH order by MaHH";
+            da = new SqlDataAdapter(sql, conn); // câu lệnh giúp dataAdapter truy vấn dữ liệu
+            dt.Clear();// xóa đi dữ liệu đang có
+            da.Fill(dt); // dt là nơi chứa dữ liệu dataAdapter lấys về
+            grdData.DataSource = dt;
+            NapCT();
             grdData.CurrentCell = grdData[0, grdData.RowCount - 1]; // di chuyển bản ghi hiện thời đến dòng cuối cùng
             NapCT();
             MessageBox.Show("Hãy nhập nội dung bản ghi mới, kết thúc ấn Cập nhật!");
