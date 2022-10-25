@@ -36,7 +36,6 @@ namespace LTUDMIS62
             this.Dvt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGvnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtManhom = new System.Windows.Forms.TextBox();
             this.txtMaHH = new System.Windows.Forms.TextBox();
             this.txtTenHH = new System.Windows.Forms.TextBox();
             this.txtDonvt = new System.Windows.Forms.TextBox();
@@ -64,6 +63,11 @@ namespace LTUDMIS62
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddnew = new System.Windows.Forms.Button();
+            this.txtManhom = new System.Windows.Forms.ComboBox();
+            this.btnInBC1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -139,44 +143,37 @@ namespace LTUDMIS62
             this.Sanxuat.Name = "Sanxuat";
             this.Sanxuat.Width = 108;
             // 
-            // txtManhom
-            // 
-            this.txtManhom.Location = new System.Drawing.Point(854, 227);
-            this.txtManhom.Name = "txtManhom";
-            this.txtManhom.Size = new System.Drawing.Size(211, 26);
-            this.txtManhom.TabIndex = 1;
-            // 
             // txtMaHH
             // 
-            this.txtMaHH.Location = new System.Drawing.Point(854, 270);
+            this.txtMaHH.Location = new System.Drawing.Point(854, 262);
             this.txtMaHH.Name = "txtMaHH";
             this.txtMaHH.Size = new System.Drawing.Size(211, 26);
             this.txtMaHH.TabIndex = 2;
             // 
             // txtTenHH
             // 
-            this.txtTenHH.Location = new System.Drawing.Point(854, 316);
+            this.txtTenHH.Location = new System.Drawing.Point(854, 300);
             this.txtTenHH.Name = "txtTenHH";
             this.txtTenHH.Size = new System.Drawing.Size(211, 26);
             this.txtTenHH.TabIndex = 3;
             // 
             // txtDonvt
             // 
-            this.txtDonvt.Location = new System.Drawing.Point(854, 361);
+            this.txtDonvt.Location = new System.Drawing.Point(854, 337);
             this.txtDonvt.Name = "txtDonvt";
             this.txtDonvt.Size = new System.Drawing.Size(211, 26);
             this.txtDonvt.TabIndex = 4;
             // 
             // txtDongia
             // 
-            this.txtDongia.Location = new System.Drawing.Point(854, 406);
+            this.txtDongia.Location = new System.Drawing.Point(854, 374);
             this.txtDongia.Name = "txtDongia";
             this.txtDongia.Size = new System.Drawing.Size(211, 26);
             this.txtDongia.TabIndex = 5;
             // 
             // txtSanxuat
             // 
-            this.txtSanxuat.Location = new System.Drawing.Point(854, 452);
+            this.txtSanxuat.Location = new System.Drawing.Point(854, 413);
             this.txtSanxuat.Name = "txtSanxuat";
             this.txtSanxuat.Size = new System.Drawing.Size(211, 26);
             this.txtSanxuat.TabIndex = 6;
@@ -196,37 +193,40 @@ namespace LTUDMIS62
             // 
             this.lblMahnag.AutoSize = true;
             this.lblMahnag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMahnag.Location = new System.Drawing.Point(722, 271);
+            this.lblMahnag.Location = new System.Drawing.Point(722, 263);
             this.lblMahnag.Name = "lblMahnag";
             this.lblMahnag.Size = new System.Drawing.Size(89, 25);
             this.lblMahnag.TabIndex = 8;
             this.lblMahnag.Text = "Mã hàng";
+            this.lblMahnag.Click += new System.EventHandler(this.lblMahnag_Click);
             // 
             // lblTenhang
             // 
             this.lblTenhang.AutoSize = true;
             this.lblTenhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenhang.Location = new System.Drawing.Point(722, 317);
+            this.lblTenhang.Location = new System.Drawing.Point(722, 301);
             this.lblTenhang.Name = "lblTenhang";
             this.lblTenhang.Size = new System.Drawing.Size(96, 25);
             this.lblTenhang.TabIndex = 9;
             this.lblTenhang.Text = "Tên hàng";
+            this.lblTenhang.Click += new System.EventHandler(this.lblTenhang_Click);
             // 
             // txtDvt
             // 
             this.txtDvt.AutoSize = true;
             this.txtDvt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDvt.Location = new System.Drawing.Point(722, 362);
+            this.txtDvt.Location = new System.Drawing.Point(722, 338);
             this.txtDvt.Name = "txtDvt";
             this.txtDvt.Size = new System.Drawing.Size(103, 25);
             this.txtDvt.TabIndex = 10;
             this.txtDvt.Text = "Đơn vị tính";
+            this.txtDvt.Click += new System.EventHandler(this.txtDvt_Click);
             // 
             // lblDongia
             // 
             this.lblDongia.AutoSize = true;
             this.lblDongia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDongia.Location = new System.Drawing.Point(722, 407);
+            this.lblDongia.Location = new System.Drawing.Point(722, 375);
             this.lblDongia.Name = "lblDongia";
             this.lblDongia.Size = new System.Drawing.Size(79, 25);
             this.lblDongia.TabIndex = 11;
@@ -237,11 +237,12 @@ namespace LTUDMIS62
             // 
             this.lblNuocSX.AutoSize = true;
             this.lblNuocSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNuocSX.Location = new System.Drawing.Point(722, 453);
+            this.lblNuocSX.Location = new System.Drawing.Point(722, 413);
             this.lblNuocSX.Name = "lblNuocSX";
             this.lblNuocSX.Size = new System.Drawing.Size(91, 25);
             this.lblNuocSX.TabIndex = 12;
             this.lblNuocSX.Text = "Nước SX";
+            this.lblNuocSX.Click += new System.EventHandler(this.lblNuocSX_Click);
             // 
             // btnFirst
             // 
@@ -370,7 +371,7 @@ namespace LTUDMIS62
             // 
             // CmdEnd
             // 
-            this.CmdEnd.Location = new System.Drawing.Point(1036, 514);
+            this.CmdEnd.Location = new System.Drawing.Point(1034, 551);
             this.CmdEnd.Name = "CmdEnd";
             this.CmdEnd.Size = new System.Drawing.Size(97, 48);
             this.CmdEnd.TabIndex = 18;
@@ -380,7 +381,7 @@ namespace LTUDMIS62
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(923, 514);
+            this.btnUpdate.Location = new System.Drawing.Point(921, 551);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 48);
             this.btnUpdate.TabIndex = 19;
@@ -390,7 +391,7 @@ namespace LTUDMIS62
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(810, 514);
+            this.btnDelete.Location = new System.Drawing.Point(808, 551);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 48);
             this.btnDelete.TabIndex = 20;
@@ -400,7 +401,7 @@ namespace LTUDMIS62
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(697, 514);
+            this.btnEdit.Location = new System.Drawing.Point(695, 551);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(97, 48);
             this.btnEdit.TabIndex = 21;
@@ -410,7 +411,7 @@ namespace LTUDMIS62
             // 
             // btnAddnew
             // 
-            this.btnAddnew.Location = new System.Drawing.Point(584, 514);
+            this.btnAddnew.Location = new System.Drawing.Point(582, 551);
             this.btnAddnew.Name = "btnAddnew";
             this.btnAddnew.Size = new System.Drawing.Size(97, 48);
             this.btnAddnew.TabIndex = 22;
@@ -418,12 +419,62 @@ namespace LTUDMIS62
             this.btnAddnew.UseVisualStyleBackColor = true;
             this.btnAddnew.Click += new System.EventHandler(this.btnAddnew_Click);
             // 
+            // txtManhom
+            // 
+            this.txtManhom.FormattingEnabled = true;
+            this.txtManhom.Location = new System.Drawing.Point(854, 228);
+            this.txtManhom.Name = "txtManhom";
+            this.txtManhom.Size = new System.Drawing.Size(211, 28);
+            this.txtManhom.TabIndex = 23;
+            // 
+            // btnInBC1
+            // 
+            this.btnInBC1.BackColor = System.Drawing.Color.Thistle;
+            this.btnInBC1.Location = new System.Drawing.Point(853, 445);
+            this.btnInBC1.Name = "btnInBC1";
+            this.btnInBC1.Size = new System.Drawing.Size(212, 39);
+            this.btnInBC1.TabIndex = 24;
+            this.btnInBC1.Text = "In kiểm kê theo nhóm hàng";
+            this.btnInBC1.UseVisualStyleBackColor = false;
+            this.btnInBC1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(599, 509);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(123, 26);
+            this.dateTimePicker1.TabIndex = 25;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(738, 509);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(120, 26);
+            this.dateTimePicker2.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(921, 509);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 37);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FrmDMHH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1156, 574);
+            this.ClientSize = new System.Drawing.Size(1183, 601);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btnInBC1);
+            this.Controls.Add(this.txtManhom);
             this.Controls.Add(this.btnAddnew);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
@@ -445,7 +496,6 @@ namespace LTUDMIS62
             this.Controls.Add(this.txtDonvt);
             this.Controls.Add(this.txtTenHH);
             this.Controls.Add(this.txtMaHH);
-            this.Controls.Add(this.txtManhom);
             this.Controls.Add(this.grdData);
             this.Name = "FrmDMHH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -468,7 +518,6 @@ namespace LTUDMIS62
         private System.Windows.Forms.DataGridViewTextBoxColumn Dvt;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGvnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sanxuat;
-        private System.Windows.Forms.TextBox txtManhom;
         private System.Windows.Forms.TextBox txtMaHH;
         private System.Windows.Forms.TextBox txtTenHH;
         private System.Windows.Forms.TextBox txtDonvt;
@@ -496,5 +545,10 @@ namespace LTUDMIS62
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAddnew;
+        private System.Windows.Forms.ComboBox txtManhom;
+        private System.Windows.Forms.Button btnInBC1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button1;
     }
 }

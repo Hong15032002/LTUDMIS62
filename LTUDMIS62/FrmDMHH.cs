@@ -19,6 +19,7 @@ namespace LTUDMIS62
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         DataTable comdt = new DataTable();
+        DataTable com2dt = new DataTable();
         string sql, constr;
         int i;
         Boolean addnewfLag; 
@@ -54,6 +55,13 @@ namespace LTUDMIS62
             da.Fill(dt); // dt là nơi chứa dữ liệu dataAdapter lấys về
             grdData.DataSource = dt;
             NapCT();
+            sql = "select Manhom from tblDMNhom";
+            da = new SqlDataAdapter(sql, conn);
+            com2dt.Clear();
+            da.Fill(com2dt);
+            txtManhom.DataSource = com2dt;
+            txtManhom.DisplayMember = "MaNhom"; // trường hiện lên
+            // NHỮNG GÌ THUỘC VỀ NHÓM PHẢI DÙNG COMBOBOX ĐỂ CHỌN GIÁ TRỊ
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -109,7 +117,7 @@ namespace LTUDMIS62
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            sql = "select Manhom,MaHH,TenHH,Dvt,Dgvnd,Sanxuat from tblDMHH"+
+            sql = "select Manhom,MaHH,TenHH,Dvt,DGvnd,Sanxuat from tblDMHH"+
                 " where "+ comTentruong.Text+"=N'"+ comGiatri.Text+"'";
             da = new SqlDataAdapter(sql, conn); // câu lệnh giúp dataAdapter truy vấn dữ liệu
             dt.Clear();
@@ -152,7 +160,6 @@ namespace LTUDMIS62
             MessageBox.Show(" Hãy thực hiện mọi mong muốn trên ô lưới, " +
                 "kết thúc bấm nút Cập nhật", "Thông báo", MessageBoxButtons.OK);
             btnUpdate.Enabled = true;
-
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -160,12 +167,28 @@ namespace LTUDMIS62
             if (addnewfLag == false)
             {
                 // chỗ này là cập nhật sửa chữa
+                for (i = 0; i < grdData.RowCount - 1; i++)
+                {       
+                    txtManhom.Text = grdData.Rows[i].Cells["Manhom"].Value.ToString();
+                    txtMaHH.Text = grdData.Rows[i].Cells["MaHH"].Value.ToString();
+                    txtTenHH.Text = grdData.Rows[i].Cells["TenHH"].Value.ToString();
+                    txtDonvt.Text = grdData.Rows[i].Cells["Dvt"].Value.ToString();
+                    txtDongia.Text = grdData.Rows[i].Cells["DGvnd"].Value.ToString();
+                    txtSanxuat.Text = grdData.Rows[i].Cells["Sanxuat"].Value.ToString();
+                    sql = "update tblDMHH set TenHH=N'" + txtTenHH.Text + "',Dvt=N'" + txtDvt.Text + "'," 
+                        + "DGvnd=" + txtDongia.Text + ",Sanxuat=N'" + txtSanxuat.Text
+                        + txtSanxuat.Text + "' Where MaHH='" + txtMaHH.Text + "'";
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql;
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Đã cập nhật thành công!", "Thông báo");
             }    
             else
             {
                 // chỗ này là cập nhật thêm mới
                 addnewfLag = false;
-                sql = "insert into tblDMHH (MaNhom,MaHH,TenHH,Dvt,Dgvnd,Sanxuat)" +
+                sql = "insert into tblDMHH (MaNhom,MaHH,TenHH,Dvt,DGvnd,Sanxuat)" +
                     "Values ('" + txtManhom.Text + "','" + txtMaHH.Text + "',N'" +
                     txtTenHH.Text + "',N'" + txtDvt.Text + "'," + txtDongia.Text + ",N'"
                     + txtSanxuat.Text + "')";
@@ -197,6 +220,56 @@ namespace LTUDMIS62
             txtManhom.Focus();// chuyển con trỏ soạn thảo đến mã nhóm
             addnewfLag = true;
             btnUpdate.Enabled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            rptDMHH rpt = new rptDMHH();
+            DataTable rptData = new DataTable();
+            sql = "Select MaHH, TenHH, Dvt, DGvnd, Sanxuat From tblDMHH where " +
+                " Manhom = '" + comGiatri.Text + "'";
+            da = new SqlDataAdapter(sql, conn); // lấy dữ liệu combobox hay ô lưới
+            da.Fill(rptData);
+            rpt.SetDataSource(rptData);
+            rpt.DataDefinition.FormulaFields["Tennhom"].Text = "'" + comGiatri.Text + "'";
+            FrmprvDMHH f = new FrmprvDMHH(rpt);
+            f.Show();
+        }
+
+        private void lblNuocSX_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDvt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTenhang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMahnag_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           
+            BCTH rpt = new BCTH();
+            DataTable rptData3 = new DataTable();
+            sql = "Select MaHH, TenHH, Dvt, DGvnd, Sanxuat From tblDMHH where " +
+                " Manhom = '" + comGiatri.Text + "'";
+            da = new SqlDataAdapter(sql, conn); // lấy dữ liệu combobox hay ô lưới
+            da.Fill(rptData3);
+            rpt.SetDataSource(rptData3);
+            rpt.DataDefinition.FormulaFields["Tennhom"].Text = "'" + comGiatri.Text + "'";
+            frmprvNhomHH f = new frmprvNhomHH(rpt);
+            f.Show();
         }
 
         // i-2 vì số thứ tự chạy từ 0 và nếu i-1 thì nó sẽ nhảy xuống dòng trắng cuối cùng
