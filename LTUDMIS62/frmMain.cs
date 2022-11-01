@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace LTUDMIS62
 {
+
     public partial class frmMain : Form
     {
-        public frmMain()
+        string tenuser, phannhom;
+        public frmMain(string username, string userright)
         {
             InitializeComponent();
+            tenuser = username;
+            phannhom = userright;
         }
 
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,7 +34,7 @@ namespace LTUDMIS62
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GPT f = new GPT();
-            f.Show(); 
+            f.Show();
         }
 
         private void táchTênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,12 +68,12 @@ namespace LTUDMIS62
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Status1.Text = "Giải phương trình bậc 2 "; 
+            Status1.Text = "Giải phương trình bậc 2 ";
             GPT f = new GPT();
             f.ShowDialog();
             Status1.Text = "Ready!";
@@ -94,6 +98,20 @@ namespace LTUDMIS62
         {
             FrmDMHH f = new FrmDMHH();
             f.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            thietlap();
+        }
+        private void thietlap() // thiết lập để phân quyền người dùng
+        {
+            Status2.Text = "Người dùng hiện thời: " + tenuser;
+            if (phannhom == "user")
+            {
+                quảnLýNgườiDùngToolStripMenuItem.Visible = false;
+                saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Visible = false;
+            }    
         }
     }
 }

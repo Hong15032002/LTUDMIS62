@@ -65,6 +65,12 @@
       <DependentUpon>ChungTu.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="frmlogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin2.Designer.cs">
+      <DependentUpon>frmlogin2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmprvDMHH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="ChungTu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ChungTu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin2.resx">
+      <DependentUpon>frmlogin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmprvDMHH.resx">
       <DependentUpon>FrmprvDMHH.cs</DependentUpon>

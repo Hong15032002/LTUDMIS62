@@ -32,9 +32,13 @@ namespace LTUDMIS62
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.kếtThúcChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcTừĐiểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,25 +76,21 @@ namespace LTUDMIS62
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.đồngHồToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.đăngNhậpLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.giảiPhươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.kếtThúcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Status1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Status2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Status3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.đăngNhậpLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.giảiPhươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kếtThúcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kếtThúcChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -129,20 +129,49 @@ namespace LTUDMIS62
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(132, 36);
             this.hệThốngToolStripMenuItem.Text = "&Hệ thống";
             // 
+            // đăngNhậpToolStripMenuItem
+            // 
+            this.đăngNhậpToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_in;
+            this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
+            this.đăngNhậpToolStripMenuItem.Text = "1. Đăng nhập";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(451, 6);
+            // 
+            // quảnLýNgườiDùngToolStripMenuItem
+            // 
+            this.quảnLýNgườiDùngToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.user;
+            this.quảnLýNgườiDùngToolStripMenuItem.Name = "quảnLýNgườiDùngToolStripMenuItem";
+            this.quảnLýNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
+            this.quảnLýNgườiDùngToolStripMenuItem.Text = "2. Quản lý người dùng";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(451, 6);
             // 
+            // saoLưuVàPhụcHồiDữLiệuToolStripMenuItem
+            // 
+            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.data;
+            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Name = "saoLưuVàPhụcHồiDữLiệuToolStripMenuItem";
+            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
+            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Text = "3. Sao lưu và phục hồi dữ liệu";
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(451, 6);
+            // 
+            // kếtThúcChươngTrìnhToolStripMenuItem
+            // 
+            this.kếtThúcChươngTrìnhToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_out;
+            this.kếtThúcChươngTrìnhToolStripMenuItem.Name = "kếtThúcChươngTrìnhToolStripMenuItem";
+            this.kếtThúcChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
+            this.kếtThúcChươngTrìnhToolStripMenuItem.Text = "4. Kết thúc chương trình";
+            this.kếtThúcChươngTrìnhToolStripMenuItem.Click += new System.EventHandler(this.kếtThúcChươngTrìnhToolStripMenuItem_Click);
             // 
             // dữLiệuToolStripMenuItem
             // 
@@ -407,15 +436,38 @@ namespace LTUDMIS62
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(284, 160);
             // 
+            // đăngNhậpLạiToolStripMenuItem
+            // 
+            this.đăngNhậpLạiToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_in__2_;
+            this.đăngNhậpLạiToolStripMenuItem.Name = "đăngNhậpLạiToolStripMenuItem";
+            this.đăngNhậpLạiToolStripMenuItem.Size = new System.Drawing.Size(283, 48);
+            this.đăngNhậpLạiToolStripMenuItem.Text = "1. Đăng nhập lại";
+            // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(280, 6);
             // 
+            // giảiPhươngTrìnhToolStripMenuItem
+            // 
+            this.giảiPhươngTrìnhToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.big_data;
+            this.giảiPhươngTrìnhToolStripMenuItem.Name = "giảiPhươngTrìnhToolStripMenuItem";
+            this.giảiPhươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(283, 48);
+            this.giảiPhươngTrìnhToolStripMenuItem.Text = "2. Giải phương trình";
+            this.giảiPhươngTrìnhToolStripMenuItem.Click += new System.EventHandler(this.giảiPhươngTrìnhToolStripMenuItem_Click);
+            // 
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
             this.toolStripSeparator17.Size = new System.Drawing.Size(280, 6);
+            // 
+            // kếtThúcToolStripMenuItem
+            // 
+            this.kếtThúcToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_out__1_;
+            this.kếtThúcToolStripMenuItem.Name = "kếtThúcToolStripMenuItem";
+            this.kếtThúcToolStripMenuItem.Size = new System.Drawing.Size(283, 48);
+            this.kếtThúcToolStripMenuItem.Text = "3. Kết thúc";
+            this.kếtThúcToolStripMenuItem.Click += new System.EventHandler(this.kếtThúcToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -431,10 +483,43 @@ namespace LTUDMIS62
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::LTUDMIS62.Properties.Resources.log_in__2_;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Đăng nhập lại";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
             this.toolStripSeparator19.Size = new System.Drawing.Size(6, 49);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::LTUDMIS62.Properties.Resources.big_data;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.ToolTipText = "Gải phương trình";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::LTUDMIS62.Properties.Resources.cancel;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(44, 44);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.ToolTipText = "Kết thúc";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // statusStrip1
             // 
@@ -473,91 +558,6 @@ namespace LTUDMIS62
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // đăngNhậpLạiToolStripMenuItem
-            // 
-            this.đăngNhậpLạiToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_in__2_;
-            this.đăngNhậpLạiToolStripMenuItem.Name = "đăngNhậpLạiToolStripMenuItem";
-            this.đăngNhậpLạiToolStripMenuItem.Size = new System.Drawing.Size(283, 48);
-            this.đăngNhậpLạiToolStripMenuItem.Text = "1. Đăng nhập lại";
-            // 
-            // giảiPhươngTrìnhToolStripMenuItem
-            // 
-            this.giảiPhươngTrìnhToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.big_data;
-            this.giảiPhươngTrìnhToolStripMenuItem.Name = "giảiPhươngTrìnhToolStripMenuItem";
-            this.giảiPhươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(283, 48);
-            this.giảiPhươngTrìnhToolStripMenuItem.Text = "2. Giải phương trình";
-            this.giảiPhươngTrìnhToolStripMenuItem.Click += new System.EventHandler(this.giảiPhươngTrìnhToolStripMenuItem_Click);
-            // 
-            // kếtThúcToolStripMenuItem
-            // 
-            this.kếtThúcToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_out__1_;
-            this.kếtThúcToolStripMenuItem.Name = "kếtThúcToolStripMenuItem";
-            this.kếtThúcToolStripMenuItem.Size = new System.Drawing.Size(283, 48);
-            this.kếtThúcToolStripMenuItem.Text = "3. Kết thúc";
-            this.kếtThúcToolStripMenuItem.Click += new System.EventHandler(this.kếtThúcToolStripMenuItem_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::LTUDMIS62.Properties.Resources.log_in__2_;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.ToolTipText = "Đăng nhập lại";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::LTUDMIS62.Properties.Resources.big_data;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.ToolTipText = "Gải phương trình";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::LTUDMIS62.Properties.Resources.cancel;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(44, 44);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.ToolTipText = "Kết thúc";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // đăngNhậpToolStripMenuItem
-            // 
-            this.đăngNhậpToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_in;
-            this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
-            this.đăngNhậpToolStripMenuItem.Text = "1. Đăng nhập";
-            // 
-            // quảnLýNgườiDùngToolStripMenuItem
-            // 
-            this.quảnLýNgườiDùngToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.user;
-            this.quảnLýNgườiDùngToolStripMenuItem.Name = "quảnLýNgườiDùngToolStripMenuItem";
-            this.quảnLýNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
-            this.quảnLýNgườiDùngToolStripMenuItem.Text = "2. Quản lý người dùng";
-            // 
-            // saoLưuVàPhụcHồiDữLiệuToolStripMenuItem
-            // 
-            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.data;
-            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Name = "saoLưuVàPhụcHồiDữLiệuToolStripMenuItem";
-            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
-            this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem.Text = "3. Sao lưu và phục hồi dữ liệu";
-            // 
-            // kếtThúcChươngTrìnhToolStripMenuItem
-            // 
-            this.kếtThúcChươngTrìnhToolStripMenuItem.Image = global::LTUDMIS62.Properties.Resources.log_out;
-            this.kếtThúcChươngTrìnhToolStripMenuItem.Name = "kếtThúcChươngTrìnhToolStripMenuItem";
-            this.kếtThúcChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(454, 50);
-            this.kếtThúcChươngTrìnhToolStripMenuItem.Text = "4. Kết thúc chương trình";
-            this.kếtThúcChươngTrìnhToolStripMenuItem.Click += new System.EventHandler(this.kếtThúcChươngTrìnhToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -572,6 +572,7 @@ namespace LTUDMIS62
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);

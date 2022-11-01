@@ -45,23 +45,27 @@ namespace LTUDMIS62
         }
 
         private void FrmDMHH_Load(object sender, EventArgs e)
+
         {
-            constr = "Data Source=DESKTOP-BA1C3EL\\SQLEXPRESS;" +
-               "Initial Catalog=QLBH;Integrated Security=True";
-            conn.ConnectionString = constr;
-            conn.Open();
-            sql = "select Manhom,MaHH,TenHH,Dvt,DGvnd,Sanxuat from tblDMHH order by MaHH";
-            da = new SqlDataAdapter(sql, conn); // câu lệnh giúp dataAdapter truy vấn dữ liệu
-            da.Fill(dt); // dt là nơi chứa dữ liệu dataAdapter lấys về
-            grdData.DataSource = dt;
-            NapCT();
-            sql = "select Manhom from tblDMNhom";
-            da = new SqlDataAdapter(sql, conn);
-            com2dt.Clear();
-            da.Fill(com2dt);
-            txtManhom.DataSource = com2dt;
-            txtManhom.DisplayMember = "MaNhom"; // trường hiện lên
-            // NHỮNG GÌ THUỘC VỀ NHÓM PHẢI DÙNG COMBOBOX ĐỂ CHỌN GIÁ TRỊ
+            
+                // constr = "Data Source=DESKTOP-BA1C3EL\\SQLEXPRESS;" +
+                //    "Initial Catalog=QLBH;Integrated Security=True";
+                constr = "Data Source=DESKTOP-BA1C3EL\\SQLEXPRESS;Initial Catalog=QLBH;Persist Security Info=True;User ID=httt62;Password=hong";
+                conn.ConnectionString = constr;
+                conn.Open();
+                sql = "select Manhom,MaHH,TenHH,Dvt,DGvnd,Sanxuat from tblDMHH order by MaHH";
+                da = new SqlDataAdapter(sql, conn); // câu lệnh giúp dataAdapter truy vấn dữ liệu
+                da.Fill(dt); // dt là nơi chứa dữ liệu dataAdapter lấys về
+                grdData.DataSource = dt;
+                NapCT();
+                sql = "select Manhom from tblDMNhom";
+                da = new SqlDataAdapter(sql, conn);
+                com2dt.Clear();
+                da.Fill(com2dt);
+                txtManhom.DataSource = com2dt;
+                txtManhom.DisplayMember = "MaNhom"; // trường hiện lên
+                                                    // NHỮNG GÌ THUỘC VỀ NHÓM PHẢI DÙNG COMBOBOX ĐỂ CHỌN GIÁ TRỊ
+            
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
